@@ -1,0 +1,569 @@
+  /* Main Layout and Typography */
+
+/* Content Header Styles */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .content-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a3b6e;
+  }
+  
+  .content-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .action-btn {
+    padding: 10px 16px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .action-btn:hover {
+    background-color: #1557b0;
+  }
+  
+  /* Search and Filters */
+  .search-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .search-box {
+    display: flex;
+    min-width: 300px;
+  }
+  
+  .search-box input {
+    flex-grow: 1;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+  
+  .search-btn {
+    padding: 10px 14px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .filters select {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 150px;
+    background-color: white;
+  }
+  
+  /* Data Table Styles */
+  .data-table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    overflow-x: auto;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .data-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #666;
+    position: sticky;
+    top: 0;
+  }
+  
+  .data-table tbody tr:hover {
+    background-color: #f9fbfd;
+  }
+  
+  /* Status Badges */
+  .status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .status-active {
+    background-color: #e6f7ed;
+    color: #1e9d57;
+  }
+  
+  .status-pending {
+    background-color: #fff5e6;
+    color: #e67700;
+  }
+  
+  .status-suspended {
+    background-color: #feeef0;
+    color: #d73343;
+  }
+  
+  /* Table Action Buttons */
+  .action-buttons {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .table-action {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .view-btn:hover {
+    background-color: #e8f0fe;
+  }
+  
+  .edit-btn:hover {
+    background-color: #e8f0fe;
+  }
+  
+  .suspend-btn:hover {
+    background-color: #feeef0;
+  }
+  
+  .reactivate-btn:hover {
+    background-color: #e6f7ed;
+  }
+  
+  .delete-btn:hover {
+    background-color: #feeef0;
+  }
+  
+  .approve-btn:hover {
+    background-color: #e6f7ed;
+  }
+  
+  .reject-btn:hover {
+    background-color: #feeef0;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+  
+  .pagination-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination-btn:not(:disabled):hover {
+    background-color: #f8f9fa;
+  }
+  
+  .pagination-numbers {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .pagination-number {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .pagination-number.active {
+    background-color: #1a73e8;
+    color: white;
+    border-color: #1a73e8;
+  }
+  
+  .pagination-number:not(.active):hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .content-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    
+    .search-filters {
+      flex-direction: column;
+    }
+    
+    .search-box {
+      width: 100%;
+    }
+    
+    .filters {
+      width: 100%;
+    }
+    
+    .filters select {
+      flex: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .table-action {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .data-table th, 
+    .data-table td {
+      padding: 10px 12px;
+    }
+    
+    .pagination {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+    /* Main Layout and Typography */
+  
+  /* Content Header Styles */
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .content-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a3b6e;
+  }
+  
+  .content-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .action-btn {
+    padding: 10px 16px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .action-btn:hover {
+    background-color: #1557b0;
+  }
+  
+  /* Search and Filters */
+  .search-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .search-box {
+    display: flex;
+    min-width: 300px;
+  }
+  
+  .search-box input {
+    flex-grow: 1;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+  
+  .search-btn {
+    padding: 10px 14px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .filters select {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 150px;
+    background-color: white;
+  }
+  
+  /* Data Table Styles */
+  .data-table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    overflow-x: auto;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .data-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #666;
+    position: sticky;
+    top: 0;
+  }
+  
+  .data-table tbody tr:hover {
+    background-color: #f9fbfd;
+  }
+  
+  /* Status Badges */
+  .status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .status-active {
+    background-color: #e6f7ed;
+    color: #1e9d57;
+  }
+  
+  .status-pending {
+    background-color: #fff5e6;
+    color: #e67700;
+  }
+  
+  .status-suspended {
+    background-color: #feeef0;
+    color: #d73343;
+  }
+  
+  /* Table Action Buttons */
+  .action-buttons {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .table-action {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .view-btn:hover {
+    background-color: #e8f0fe;
+  }
+  
+  .edit-btn:hover {
+    background-color: #e8f0fe;
+  }
+  
+  .suspend-btn:hover {
+    background-color: #feeef0;
+  }
+  
+  .reactivate-btn:hover {
+    background-color: #e6f7ed;
+  }
+  
+  .delete-btn:hover {
+    background-color: #feeef0;
+  }
+  
+  .approve-btn:hover {
+    background-color: #e6f7ed;
+  }
+  
+  .reject-btn:hover {
+    background-color: #feeef0;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+  
+  .pagination-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination-btn:not(:disabled):hover {
+    background-color: #f8f9fa;
+  }
+  
+  .pagination-numbers {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .pagination-number {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .pagination-number.active {
+    background-color: #1a73e8;
+    color: white;
+    border-color: #1a73e8;
+  }
+  
+  .pagination-number:not(.active):hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .content-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    
+    .search-filters {
+      flex-direction: column;
+    }
+    
+    .search-box {
+      width: 100%;
+    }
+    
+    .filters {
+      width: 100%;
+    }
+    
+    .filters select {
+      flex: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .table-action {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .data-table th, 
+    .data-table td {
+      padding: 10px 12px;
+    }
+    
+    .pagination {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
